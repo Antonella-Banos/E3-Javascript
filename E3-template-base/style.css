@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,4 +8,35 @@
     list-style: none;
   }
 
-  
+body {
+  background: #242424;
+  font-family: "Signika Negative";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}  
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5 rem;
+  padding: 4.5 rem;
+}
+
+.pizza-logo {
+  height: 30px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.input-number {
+  display: flex;
+
+}
