@@ -9,7 +9,7 @@
   }
 
 body {
-  background: #242424;
+  background: #daa89b;
   font-family: "Signika Negative";
   display: flex;
   align-items: center;
@@ -24,19 +24,69 @@ body {
   padding: 4.5 rem;
 }
 
-.pizza-logo {
-  height: 30px;
-  margin-top: 60px;
-  margin-bottom: 20px;
+h1 {
+  background: linear-gradient(to top, #6d1a36, #861657);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .form {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container img {
+  width: 25px;
+  background-color: #aa4465;
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 10px;
 }
 
 .input-number {
   display: flex;
+  background-color: #aa4465;
+  outline: none;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  padding: 15px 10px;
+  width: 190px;
+  color: antiquewhite;
+  padding-left: 10px;
+}
 
+.input-number::placeholder {
+  color: antiquewhite;
+  font-family: "Signika Negative";
+  font-size: 1rem;
+}
+
+.input-btn {
+  background: linear-gradient(to top, #6d1a36, #861657);  
+  outline: none;
+  border: none;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.input-btn span {
+  color: antiquewhite;
+  font-family: "Signika Negative";
+  font-size: 1rem;
+}
+
+.input-btn:hover  {
+  transform: scale(1.1);
+  transition: all 0.8s;
 }
