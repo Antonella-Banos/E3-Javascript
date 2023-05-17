@@ -114,21 +114,17 @@ h1 {
   font-size: 2rem;
 }
 
-.pizza-price {
-  color: antiquewhite;
-  font-size: 2rem;
-}
-
 .pizza-img {
   height: 16rem;
   width: 16rem;
   border-radius: 1.5rem;
 }
 
-.ingredients {
+.pizza-price {
   color: antiquewhite;
   font-size: 2rem;
 }
+
 
 /* Mensaje de error */
 

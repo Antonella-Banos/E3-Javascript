@@ -51,6 +51,8 @@ const pizzas = [
 const pizzaContainer = document.querySelector(".pizza-container");
 const inputNumber = document.querySelector(".input-number");
 const errorContainer = document.querySelector(".error-container");
+// const localStorageData = "localStorageData";
+
 
 
 const errorMsg = () => {
@@ -80,23 +82,18 @@ const showPizza = (unaPizza) => {
   h3.classList.add("pizza-name");
   h3.innerText = unaPizza.nombre;
 
-  let p = document.createElement("p");
-  p.classList.add("pizza-price");
-  p.textContent = "$" + unaPizza.precio;
-
   let img = document.createElement("img");
   img.classList.add("pizza-img");
   img.src = unaPizza.imagen;
 
-  let ingredients = document.createElement("ingredients");
-  ingredients.classList.add("ingredients");
-  ingredients.textContent = unaPizza.ingredientes;
+  let p = document.createElement("p");
+  p.classList.add("pizza-price");
+  p.textContent = "$" + unaPizza.precio;
 
   pizzaContainer.appendChild(div);
   div.appendChild(h3);
   div.appendChild(p);
   div.appendChild(img);
-  div.appendChild(ingredients);
 
 }
 
@@ -118,19 +115,41 @@ const searchPizza = () => {
 
       showPizza(unaPizza);
 
-
+      localStorage.setItem(localStorageData, JSON.stringify(unaPizza));
+      return;
 
     }
   }
 
-  errorMsg("No existe ninguna pizza que tenga ese número");
+  errorMsg("Ese número no es válido");
 
 }
 
+console.log(
+  JSON.stringify({
+    id: 4,
+    nombre: "pizza Especial",
+    precio: 1000,
+    imagen: "./img/especial.png",
+  })
+);
 
-init = () => {}
+console.log(JSON.parse({"id":4,"nombre":"pizza Especial","precio":1000, "imagen":"./img/especial.png"}));
 
-init();
+
+const pizzaStringificada = localStorage.getItem()
+
+
+// init = () => {
+//   const pizzaStringificada = localStorage.getItem(localStorageData);
+//   if (pizzaStringificada !== null) {
+//     const unaPizza = JSON.parse(pizzaStringificada);
+//     showPizza(unaPizza);
+//   }
+  
+// }
+
+// init();
 
 
 
