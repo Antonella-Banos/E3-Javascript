@@ -53,6 +53,20 @@ const inputNumber = document.querySelector(".input-number");
 const errorContainer = document.querySelector(".error-container");
 
 
+const errorMsg = () => {
+
+  pizzaContainer.innerHTML = "";
+  inputNumber.classList.add("error-message");
+  errorContainer.innerHTML = "";
+
+
+  const errorAlert = document.createElement("alert");
+  alert.classList.add("error-message");
+  alert.innerText = message;
+
+  errorContainer.appendChild(alert);
+  
+}
 
 
 const showPizza = (unaPizza) => {
@@ -80,22 +94,6 @@ const showPizza = (unaPizza) => {
   div.appendChild(p);
 
 }
-
-const errorMsg = () => {
-
-  pizzaContainer.innerHTML = "";
-  inputNumber.classList.add("error-message");
-  errorContainer.innerHTML = "";
-
-
-  const errorAlert = document.createElement("alert");
-  alert.classList.add("error-message");
-  alert.innerText = message;
-
-  errorContainer.appendChild(alert);
-  
-}
-
 
 
 const searchPizza = () => {
@@ -125,6 +123,8 @@ const searchPizza = () => {
 init = () => {}
 
 init();
+
+
 
 
 
