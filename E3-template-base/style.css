@@ -9,7 +9,7 @@
   }
 
 body {
-  background: #daa89b;
+  background: #242424;
   font-family: "Signika Negative";
   display: flex;
   align-items: center;
@@ -17,9 +17,12 @@ body {
   flex-direction: column;
 }  
 
+/* Contenedor */
+
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5 rem;
   padding: 4.5 rem;
 }
@@ -89,4 +92,36 @@ h1 {
 .input-btn:hover  {
   transform: scale(1.1);
   transition: all 0.8s;
+}
+
+/* Pizza */
+
+.pizza-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.pizza-name {
+  color:antiquewhite;
+  font-size: 2rem;
+}
+
+.pizza-img {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 1.5rem;
+}
+
+.pizza-price {
+  color: antiquewhite;
+  font-size: 2rem;
+}
+
+/* Mensaje de error */
+
+.error-message {
+  color: red;
+  font-size: 1rem;
 }
