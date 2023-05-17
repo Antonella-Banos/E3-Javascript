@@ -60,9 +60,9 @@ const errorMsg = () => {
   errorContainer.innerHTML = "";
 
 
-  const errorAlert = document.createElement("alert");
-  alert.classList.add("error-message");
-  alert.innerText = message;
+  const errorAlert = document.createElement("alerta");
+  alerta.classList.add("error-message");
+  alerta.innerText = message;
 
   errorContainer.appendChild(alert);
   
@@ -80,18 +80,23 @@ const showPizza = (unaPizza) => {
   h3.classList.add("pizza-name");
   h3.innerText = unaPizza.nombre;
 
-  let img = document.createElement("img");
-  img.classList.add("pizza-img");
-  img.src = unaPizza.imagen;
-
   let p = document.createElement("p");
   p.classList.add("pizza-price");
   p.textContent = "$" + unaPizza.precio;
 
+  let img = document.createElement("img");
+  img.classList.add("pizza-img");
+  img.src = unaPizza.imagen;
+
+  let ingredients = document.createElement("ingredients");
+  ingredients.classList.add("ingredients");
+  ingredients.textContent = unaPizza.ingredientes;
+
   pizzaContainer.appendChild(div);
   div.appendChild(h3);
-  div.appendChild(img);
   div.appendChild(p);
+  div.appendChild(img);
+  div.appendChild(ingredients);
 
 }
 
@@ -113,9 +118,12 @@ const searchPizza = () => {
 
       showPizza(unaPizza);
 
+
+
     }
   }
 
+  errorMsg("No existe ninguna pizza que tenga ese número");
 
 }
 
